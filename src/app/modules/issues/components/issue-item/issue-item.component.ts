@@ -20,6 +20,9 @@ export class IssueItemComponent {
   }
 
   prefetchData(){    
-   this.issueService.prefetchIssue(this.issue().number.toString());
+   //this.issueService.prefetchIssue(this.issue().number.toString());   
+   console.log(this.issue().number);
+   this.issueService.setIssueData(this.issue());
+   this.issueService.prefetchIssueComments(`${this.issue().number}`);
   }
  }

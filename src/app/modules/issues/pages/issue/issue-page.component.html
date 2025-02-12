@@ -15,6 +15,10 @@
      <p>Loading...</p>    
  }
  @else{    
+    <div class="py-8">
+    <h1 class="text-xl py-2">Comments</h1>
+    <hr />
+    </div>
     @for(issue of issueCommentQuery.data()!;track issue.id){        
         <issue-comment [issue]="issue"></issue-comment>
     }@empty{        
